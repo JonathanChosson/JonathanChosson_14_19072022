@@ -1,0 +1,17 @@
+.Header{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 10px;
+}
+
+.Header__logo{
+    width: 150px;
+    height: 150px;
+}
+
+.Header__h1{
+    color: #93AC32;
+}
