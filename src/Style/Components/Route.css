@@ -1,0 +1,18 @@
+.Route{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.Route__link{
+    text-decoration: none;
+    color: black;
+    margin: 0px 10px 0px 10px;
+}
+
+.underline{
+    text-decoration: underline;
+}

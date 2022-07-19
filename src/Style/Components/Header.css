@@ -1,5 +1,5 @@
-.Header{
-    width: 100vw;
+.Header {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,11 +7,11 @@
     padding: 10px;
 }
 
-.Header__logo{
+.Header__logo {
     width: 150px;
     height: 150px;
 }
 
-.Header__h1{
-    color: #93AC32;
+.Header__h1 {
+    color: #93ac32;
 }
