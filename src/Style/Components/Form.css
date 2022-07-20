@@ -64,3 +64,7 @@
 select::-ms-expand {
     display: none; /* supprimer la fléche par défaut en IE 10 et 11 */
 }
+
+.Form input {
+    margin: 2px;
+}
