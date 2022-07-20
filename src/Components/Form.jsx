@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import stateData from '../Data/state'
 import '../Style/Components/Form.css'
+import { addNewEmployee } from '../Features/employeeList'
+import { useDispatch } from 'react-redux'
 
 const Form = () => {
+    const dispatch = useDispatch()
     const [newEmployee, setNewEmployee] = useState({
         firstName: '',
         lastName: '',
@@ -55,6 +58,11 @@ const Form = () => {
             default:
                 console.error(new Error('Whoops, something bad happened'))
         }
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault()
+        dispatch(addNewEmployee(newEmployee))
     }
 
     return (
@@ -134,7 +142,9 @@ const Form = () => {
                 </fieldset>
             </form>
             <span className="Form__span">
-                <button className="Form__span__button">Save</button>
+                <button className="Form__span__button" onClick={handleSubmit}>
+                    Save
+                </button>
             </span>
         </div>
     )
