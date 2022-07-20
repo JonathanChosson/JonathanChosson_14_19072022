@@ -51,7 +51,7 @@
     height: 250px;
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 10px !important;
     padding: 10px;
     margin: 0px 10px 0px 10px;
 }
@@ -59,4 +59,8 @@
 .Form__fieldset label {
     color: #93ac32;
     margin-top: 5px;
+}
+
+select::-ms-expand {
+    display: none; /* supprimer la fléche par défaut en IE 10 et 11 */
 }
