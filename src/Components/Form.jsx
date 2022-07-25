@@ -1,21 +1,21 @@
-import React, { useState } from 'react'
-import stateData from '../Data/state'
-import '../Style/Components/Form.css'
-import { addNewEmployee } from '../Features/employeeList'
-import { useDispatch } from 'react-redux'
+import React, { useState } from "react"
+import stateData from "../Data/state"
+import "../Style/Components/Form.css"
+import { addNewEmployee } from "../Features/employeeList"
+import { useDispatch } from "react-redux"
 
 const Form = () => {
     const dispatch = useDispatch()
     const [newEmployee, setNewEmployee] = useState({
-        firstName: '',
-        lastName: '',
-        dateOfBirth: '',
-        startDate: '',
-        department: '',
-        street: '',
-        city: '',
-        state: '',
-        zipCode: '',
+        firstName: "",
+        lastName: "",
+        startDate: "",
+        department: "",
+        dateOfBirth: "",
+        street: "",
+        city: "",
+        state: "",
+        zipCode: "",
     })
 
     function setEmployee(key, value) {
@@ -28,35 +28,35 @@ const Form = () => {
     function handleChange(e) {
         e.preventDefault()
         switch (e.target.id) {
-            case 'first-name':
-                setEmployee('firstName', e.target.value)
+            case "first-name":
+                setEmployee("firstName", e.target.value)
                 break
-            case 'last-name':
-                setEmployee('lastName', e.target.value)
+            case "last-name":
+                setEmployee("lastName", e.target.value)
                 break
-            case 'date-of-birth':
-                setEmployee('dateOfBirth', e.target.value)
+            case "date-of-birth":
+                setEmployee("dateOfBirth", e.target.value)
                 break
-            case 'start-date':
-                setEmployee('startDate', e.target.value)
+            case "start-date":
+                setEmployee("startDate", e.target.value)
                 break
-            case 'department':
-                setEmployee('department', e.target.value)
+            case "department":
+                setEmployee("department", e.target.value)
                 break
-            case 'street':
-                setEmployee('street', e.target.value)
+            case "street":
+                setEmployee("street", e.target.value)
                 break
-            case 'city':
-                setEmployee('city', e.target.value)
+            case "city":
+                setEmployee("city", e.target.value)
                 break
-            case 'state':
-                setEmployee('state', e.target.value)
+            case "state":
+                setEmployee("state", e.target.value)
                 break
-            case 'zip-code':
-                setEmployee('zipCode', e.target.value)
+            case "zip-code":
+                setEmployee("zipCode", e.target.value)
                 break
             default:
-                console.error(new Error('Whoops, something bad happened'))
+                console.error(new Error("Whoops, something bad happened"))
         }
     }
 

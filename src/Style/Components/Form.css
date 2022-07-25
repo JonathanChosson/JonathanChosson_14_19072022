@@ -66,5 +66,6 @@ select::-ms-expand {
 }
 
 .Form input {
-    margin: 2px;
+    margin: 3px;
+    height: 15px;
 }
