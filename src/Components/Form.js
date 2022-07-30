@@ -3,9 +3,14 @@ import stateData from "../Data/state"
 import "../Style/Components/Form.css"
 import { addNewEmployee } from "../Features/employeeList"
 import { useDispatch } from "react-redux"
+import { Modal } from "react_modular_modal"
 
 const Form = () => {
     const dispatch = useDispatch()
+    const [modalOpen, setModalOpen] = useState(false)
+    const openModal = () => setModalOpen(true)
+    const closeModal = () => setModalOpen(false)
+
     const [newEmployee, setNewEmployee] = useState({
         firstName: "",
         lastName: "",
@@ -63,6 +68,7 @@ const Form = () => {
     function handleSubmit(e) {
         e.preventDefault()
         dispatch(addNewEmployee(newEmployee))
+        openModal()
     }
 
     return (
@@ -146,6 +152,9 @@ const Form = () => {
                     Save
                 </button>
             </span>
+            {modalOpen && (
+                <Modal text="Employee created" closeAction={closeModal} />
+            )}
         </div>
     )
 }
