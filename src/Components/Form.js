@@ -7,10 +7,21 @@ import { Modal } from "react_modular_modal"
 
 const Form = () => {
     const dispatch = useDispatch()
+    /**
+     * useState for modal status
+     */
     const [modalOpen, setModalOpen] = useState(false)
+
+    /**
+     * Action for toggle modal visibility
+     * @returns void
+     */
     const openModal = () => setModalOpen(true)
     const closeModal = () => setModalOpen(false)
 
+    /**
+     * useState for new employee
+     */
     const [newEmployee, setNewEmployee] = useState({
         firstName: "",
         lastName: "",
@@ -23,6 +34,11 @@ const Form = () => {
         zipCode: "",
     })
 
+    /**
+     * function to implement newEmployee
+     * @param {string} key
+     * @param {string} value
+     */
     function setEmployee(key, value) {
         setNewEmployee({
             ...newEmployee,
@@ -30,6 +46,10 @@ const Form = () => {
         })
     }
 
+    /**
+     * handle change on form input
+     * @param {object} e
+     */
     function handleChange(e) {
         e.preventDefault()
         switch (e.target.id) {
@@ -65,6 +85,10 @@ const Form = () => {
         }
     }
 
+    /**
+     * Handlesubmit of form
+     * @param {object} e
+     */
     function handleSubmit(e) {
         e.preventDefault()
         dispatch(addNewEmployee(newEmployee))
