@@ -4,6 +4,7 @@ import "../Style/Components/Form.css"
 import { addNewEmployee } from "../Features/employeeList"
 import { useDispatch } from "react-redux"
 import { Modal } from "react_modular_modal"
+import Input from "./Input"
 
 const Form = () => {
     const dispatch = useDispatch()
@@ -101,28 +102,33 @@ const Form = () => {
             <form className="Form__form" action="#" id="create-employee">
                 <fieldset className="Form__fieldset">
                     <legend>Information</legend>
-                    <label htmlFor="first-name">First Name</label>
-                    <input
-                        type="text"
-                        id="first-name"
-                        onChange={handleChange}
+
+                    <Input
+                        id={"first-name"}
+                        desc={"First Name"}
+                        type={"text"}
+                        onchange={handleChange}
                     />
 
-                    <label htmlFor="last-name">Last Name</label>
-                    <input type="text" id="last-name" onChange={handleChange} />
-
-                    <label htmlFor="date-of-birth">Date of Birth</label>
-                    <input
-                        id="date-of-birth"
-                        type="date"
-                        onChange={handleChange}
+                    <Input
+                        id={"last-name"}
+                        desc={"Last Name"}
+                        type={"text"}
+                        onchange={handleChange}
                     />
 
-                    <label htmlFor="start-date">Start Date</label>
-                    <input
-                        id="start-date"
-                        type="date"
-                        onChange={handleChange}
+                    <Input
+                        id={"date-of-birth"}
+                        desc={"Date of Birth"}
+                        type={"date"}
+                        onchange={handleChange}
+                    />
+
+                    <Input
+                        id={"start-date"}
+                        desc={"Start Date"}
+                        type={"date"}
+                        onchange={handleChange}
                     />
 
                     <label htmlFor="department">Department</label>
@@ -131,6 +137,7 @@ const Form = () => {
                         id="department"
                         onChange={handleChange}
                     >
+                        <option>Choose option ...</option>
                         <option>Sales</option>
                         <option>Marketing</option>
                         <option>Engineering</option>
@@ -141,11 +148,19 @@ const Form = () => {
                 <fieldset className="Form__fieldset">
                     <legend>Address</legend>
 
-                    <label htmlFor="street">Street</label>
-                    <input id="street" type="text" onChange={handleChange} />
+                    <Input
+                        id={"street"}
+                        desc={"Street"}
+                        type={"text"}
+                        onchange={handleChange}
+                    />
 
-                    <label htmlFor="city">City</label>
-                    <input id="city" type="text" onChange={handleChange} />
+                    <Input
+                        id={"city"}
+                        desc={"City"}
+                        type={"text"}
+                        onchange={handleChange}
+                    />
 
                     <label htmlFor="state">State</label>
                     <select
@@ -163,11 +178,11 @@ const Form = () => {
                         })}
                     </select>
 
-                    <label htmlFor="zip-code">Zip Code</label>
-                    <input
-                        id="zip-code"
-                        type="number"
-                        onChange={handleChange}
+                    <Input
+                        id={"zip-code"}
+                        desc={"Zip Code"}
+                        type={"number"}
+                        onchange={handleChange}
                     />
                 </fieldset>
             </form>
