@@ -1,5 +1,11 @@
 import React, { Fragment } from "react"
 
+/**
+ * Component for generate input
+ * @component
+ * @param {object} param0 object contain id, desc, type and onChange function
+ * @returns {object} input Object
+ */
 const Input = ({ id, desc, type, onchange }) => {
     return (
         <Fragment>

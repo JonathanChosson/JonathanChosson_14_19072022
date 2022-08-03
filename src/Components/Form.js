@@ -6,6 +6,11 @@ import { useDispatch } from "react-redux"
 import { Modal } from "react_modular_modal"
 import Input from "./Input"
 
+/**
+ * Component for generate form
+ * @component
+ * @returns {object} form for add new employee
+ */
 const Form = () => {
     const dispatch = useDispatch()
     /**
