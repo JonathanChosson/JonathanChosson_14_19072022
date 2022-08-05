@@ -29,7 +29,7 @@ And you could see my [npm publication here](https://www.npmjs.com/package/react_
 
 ## LightHouse JSON
 
-You could fin the lightHouse JSON in the directory /lighthouse_report_JSON/
+You could fin the [lightHouse JSON here](https://github.com/JonathanChosson/JonathanChosson_14_19072022/tree/main/lighthouse_report_JSON)
 
 ## How to launched it locally ?
 
