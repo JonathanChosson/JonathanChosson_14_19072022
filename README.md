@@ -27,6 +27,10 @@ I recommand you to use VS Code
 You could see my plugin [repository here](https://github.com/JonathanChosson/react_modular_modal)
 And you could see my [npm publication here](https://www.npmjs.com/package/react_modular_modal)
 
+## LightHouse JSON
+
+You could fin the [lightHouse JSON here](https://github.com/JonathanChosson/JonathanChosson_14_19072022/lighthouse_report_JSON/)
+
 ## How to launched it locally ?
 
 ### FrontEnd :
