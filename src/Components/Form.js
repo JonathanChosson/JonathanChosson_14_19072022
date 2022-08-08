@@ -16,14 +16,17 @@ const Form = () => {
     /**
      * useState for modal status
      */
-    const [modalOpen, setModalOpen] = useState(false)
+    const [modalOpenCreate, setModalOpenCreate] = useState(false)
+    const [modalOpenError, setModalOpenError] = useState(false)
 
     /**
      * Action for toggle modal visibility
      * @returns void
      */
-    const openModal = () => setModalOpen(true)
-    const closeModal = () => setModalOpen(false)
+    const openModalCreate = () => setModalOpenCreate(true)
+    const closeModalCreate = () => setModalOpenCreate(false)
+    const openModalError = () => setModalOpenError(true)
+    const closeModalError = () => setModalOpenError(false)
 
     /**
      * useState for new employee
@@ -97,8 +100,13 @@ const Form = () => {
      */
     function handleSubmit(e) {
         e.preventDefault()
-        dispatch(addNewEmployee(newEmployee))
-        openModal()
+        console.log()
+        if (newEmployee.firstName && newEmployee.lastName) {
+            dispatch(addNewEmployee(newEmployee))
+            openModalCreate()
+        } else {
+            openModalError()
+        }
     }
 
     return (
@@ -196,8 +204,14 @@ const Form = () => {
                     Save
                 </button>
             </span>
-            {modalOpen && (
-                <Modal text="Employee created" closeAction={closeModal} />
+            {modalOpenCreate && (
+                <Modal text="Employee created" closeAction={closeModalCreate} />
+            )}
+            {modalOpenError && (
+                <Modal
+                    text="Please fill First and Last name field"
+                    closeAction={closeModalError}
+                />
             )}
         </div>
     )
